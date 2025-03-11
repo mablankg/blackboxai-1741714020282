@@ -1,0 +1,128 @@
+# Configuração do GitHub para o projeto AccountManager
+
+# Configurações de Boas-vindas para Novos Contribuidores
+newIssueWelcomeComment: >
+  Obrigado por abrir sua primeira issue! 🎉
+  Por favor, certifique-se de seguir nosso template e fornecer todas as informações necessárias.
+  Nossa equipe irá revisar em breve.
+
+newPRWelcomeComment: >
+  Obrigado por enviar seu primeiro pull request! 🚀
+  Nossa equipe irá revisar suas alterações em breve.
+  Enquanto isso, por favor verifique se todos os testes estão passando e se a documentação foi atualizada.
+
+firstPRMergeComment: >
+  Parabéns pelo seu primeiro pull request mesclado! 🎊
+  Sua contribuição é muito importante para nós.
+  Continue o ótimo trabalho!
+
+# Configurações de Labels
+labels:
+  - name: "bug"
+    color: "d73a4a"
+    description: "Algo não está funcionando"
+
+  - name: "enhancement"
+    color: "a2eeef"
+    description: "Nova feature ou solicitação"
+
+  - name: "documentation"
+    color: "0075ca"
+    description: "Melhorias ou adições à documentação"
+
+  - name: "good first issue"
+    color: "7057ff"
+    description: "Bom para contribuidores iniciantes"
+
+# Configurações de Update
+updateNotifier:
+  enabled: true
+  dependencyLabel: "dependencies"
+  updateBranch: true
+
+# Configurações de Todo
+todo:
+  keyword: ["@todo", "TODO", "FIXME"]
+  autoAssign: true
+  reopenClosed: true
+  exclude: ["node_modules/", "dist/", "build/"]
+
+# Configurações de Request Info
+requestInfoReplyComment: >
+  Precisamos de mais informações para processar sua contribuição.
+  Por favor, forneça mais detalhes seguindo nossos templates.
+
+requestInfoLabelToAdd: "needs-more-info"
+
+# Configurações de Inactive Issues
+markComment: >
+  Esta issue foi marcada como inativa devido à falta de atividade recente.
+  Será fechada se não houver atualizações nos próximos 7 dias.
+
+unmarkComment: >
+  Esta issue foi reativada devido à atividade recente.
+
+# Configurações de Lock
+lockComment: >
+  Esta thread foi bloqueada devido à falta de atividade recente.
+  Por favor, abra uma nova issue se você tiver um problema similar.
+
+# Configurações de No Response
+noResponseComment: >
+  Esta issue foi fechada automaticamente devido à falta de resposta do autor.
+  Por favor, reabra se ainda precisar de ajuda.
+
+# Configurações de Review
+reviewRequiredLabel: "review-required"
+reviewApprovedLabel: "review-approved"
+
+# Configurações de Merge
+mergeMethod: "squash"
+mergeCommitTitle: "pull-request-title"
+mergeCommitMessage: "pull-request-description"
+
+# Configurações de Branch Protection
+branchProtectionRules:
+  - pattern: "main"
+    requiresApproval: true
+    requiredReviewers: 2
+    dismissStaleReviews: true
+    requiresStatusChecks: true
+    requiresCodeOwnerReviews: true
+
+# Configurações de Issue Templates
+blank_issues_enabled: false
+contact_links:
+  - name: Suporte
+    url: https://accountmanager.com/support
+    about: Por favor, visite nossa página de suporte para ajuda
+
+# Configurações de Projeto
+project:
+  enabled: true
+  autoAssign: true
+  columns:
+    - name: "To Do"
+      automated: true
+    - name: "In Progress"
+      automated: true
+    - name: "Done"
+      automated: true
+
+# Configurações de Segurança
+security:
+  enableVulnerabilityAlerts: true
+  enableSecurityFixAlerts: true
+  enableDependabot: true
+
+# Configurações de Documentação
+documentation:
+  requireChangelog: true
+  changelogFile: "CHANGELOG.md"
+  requireTests: true
+
+# Configurações de CI/CD
+cicd:
+  requireSuccessfulChecks: true
+  autoMergeEnabled: false
+  protectBranches: true
