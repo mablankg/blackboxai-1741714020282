@@ -1,0 +1,108 @@
+# Este é um arquivo CODEOWNERS que define os proprietários de diferentes partes do código
+# Cada linha é um padrão de arquivo seguido por um ou mais proprietários
+# Para mais informações, veja: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
+
+# Proprietários padrão para todo o repositório
+* @team-leads
+
+# Backend
+/backend/ @team-backend
+/backend/controllers/ @team-backend-leads
+/backend/models/ @team-backend-leads
+/backend/services/ @team-backend-leads
+/backend/middleware/ @team-backend-security
+/backend/routes/ @team-backend
+/backend/tests/ @team-qa @team-backend
+
+# Frontend
+/frontend/ @team-frontend
+/frontend/assets/ @team-frontend-ui
+/frontend/components/ @team-frontend-leads
+/frontend/pages/ @team-frontend
+/frontend/tests/ @team-qa @team-frontend
+
+# Configurações e DevOps
+/.github/ @team-devops
+/docker/ @team-devops
+*.dockerfile @team-devops
+docker-compose*.yml @team-devops
+.env.example @team-devops @team-security
+
+# Documentação
+/docs/ @team-docs @team-leads
+*.md @team-docs
+LICENSE @team-legal
+
+# Segurança
+/backend/middleware/auth* @team-security
+/backend/config/security* @team-security
+SECURITY.md @team-security
+
+# Testes e QA
+/backend/tests/ @team-qa
+/frontend/tests/ @team-qa
+/e2e/ @team-qa
+jest.config.js @team-qa
+
+# CI/CD
+/.github/workflows/ @team-devops
+/.github/actions/ @team-devops
+
+# Dependências
+package.json @team-leads @team-security
+package-lock.json @team-leads @team-security
+yarn.lock @team-leads @team-security
+
+# Configurações
+*.config.js @team-leads
+.env.example @team-leads @team-security
+.eslintrc* @team-leads
+.prettierrc* @team-leads
+
+# APIs e Integrações
+/backend/api/ @team-backend-integration
+/backend/services/external/ @team-backend-integration
+
+# Banco de Dados
+/backend/migrations/ @team-database
+/backend/seeds/ @team-database
+
+# Monitoramento e Logs
+/backend/monitoring/ @team-devops
+/backend/logging/ @team-devops
+
+# Assets e UI
+/frontend/assets/images/ @team-design
+/frontend/assets/styles/ @team-frontend-ui
+/frontend/themes/ @team-frontend-ui
+
+# Arquivos de Build
+/dist/ @team-devops
+/build/ @team-devops
+
+# Scripts
+/scripts/ @team-devops
+*.sh @team-devops
+*.bash @team-devops
+
+# Configurações do Editor
+.vscode/ @team-leads
+.idea/ @team-leads
+*.sublime-* @team-leads
+
+# Arquivos Sensíveis
+/backend/config/secrets/ @team-security
+/backend/certificates/ @team-security
+
+# Regras Especiais
+# Arquivos que requerem revisão de múltiplas equipes
+CHANGELOG.md @team-leads @team-docs
+CONTRIBUTING.md @team-leads @team-docs
+README.md @team-leads @team-docs
+
+# Arquivos que requerem revisão de segurança
+/backend/security/ @team-security
+/frontend/security/ @team-security
+**/auth/** @team-security
+**/authentication/** @team-security
+**/authorization/** @team-security
