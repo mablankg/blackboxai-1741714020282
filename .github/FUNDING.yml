@@ -1,0 +1,29 @@
+# Estas são as opções de financiamento suportadas
+
+github: # Substitua com até 4 nomes de usuário GitHub
+  - accountmanager
+  - maintainer1
+  - maintainer2
+
+patreon: accountmanager # Substitua com um nome de usuário Patreon
+
+open_collective: accountmanager # Substitua com um nome de usuário Open Collective
+
+ko_fi: accountmanager # Substitua com um nome de usuário Ko-fi
+
+tidelift: npm/accountmanager # Substitua com um identificador de plataforma/pacote
+
+community_bridge: account-manager # Substitua com o nome do projeto no Community Bridge
+
+liberapay: accountmanager # Substitua com um nome de usuário Liberapay
+
+issuehunt: accountmanager # Substitua com um nome de usuário IssueHunt
+
+otechie: accountmanager # Substitua com um nome de usuário Otechie
+
+lfx_crowdfunding: account-manager # Substitua com um nome de projeto da Linux Foundation
+
+custom: # Substitua com até 4 URLs personalizados
+  - https://www.accountmanager.com/donate
+  - https://www.accountmanager.com/sponsor
+  - https://www.accountmanager.com/support
